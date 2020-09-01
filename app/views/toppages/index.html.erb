@@ -1,0 +1,16 @@
+<% if logged_in? %>
+  <% <div class='text-center'> %>
+    <%= image_tag current_user.avatar, size: '75x75', class: 'avatar' if current_user.avatar.attached?%>
+    <p style="color:#FFFFFF"><%= current_user.name %></p>
+  </div> 
+
+<% else %>
+  <div class="site-description text-center">
+    <h3 style="font-size: 16px">スポーツ観戦専用のマッチングアプリ</h3>
+    <p class='mt-5'>---スポーツ観戦、共に喜びを共有しませんか？---</p>
+    <p>観戦できる友達を探したい・・・</p>
+    <p>スポーツを一緒に楽しめるパートナーを見つけたい・・・</p>
+    <p class="mb-5">Sports Vilageでは、スポーツ観戦パートナーを見つけることができます</p>
+  </div>
+
+<% end %>
