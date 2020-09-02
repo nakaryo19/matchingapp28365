@@ -1,0 +1,2 @@
+class Likesport < ApplicationRecord
+end

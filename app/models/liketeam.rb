@@ -1,0 +1,2 @@
+class Liketeam < ApplicationRecord
+end
