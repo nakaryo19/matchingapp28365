@@ -1,4 +1,4 @@
-class Likesport < ActiveHash::Base
+class Likesports < ActiveHash::Base
   self.data = [
    { id: 0, name: '--' },{ id: 1, name: '野球' },{ id: 2, name: 'サッカー' },
    { id: 3, name: 'バスケットボール' },{ id: 4, name: 'バレーボール' },{ id: 5, name: 'ラグビー' },

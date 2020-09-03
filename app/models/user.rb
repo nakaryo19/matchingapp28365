@@ -1,9 +1,5 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-
+  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :sex
   belongs_to_active_hash :likesports
   belongs_to_active_hash :liketeam
@@ -11,6 +7,11 @@ class User < ApplicationRecord
   belongs_to_active_hash :job
   belongs_to_active_hash :marriage
 
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+  
   has_many :Relationship
   has_many :chat_massage
   has_many :chat_room_users
