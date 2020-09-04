@@ -386,15 +386,16 @@ footer{
 /* /ユーザー登録 */
 .select-box {
   margin: 2vh 0;
+  color:black;
 }
 
-.form-group {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding-top: 20px;
-}
+// .form-group {
+//   width: 50%;
+//   display: flex;
+//   flex-direction: column;
+//   margin: 0 auto;
+//   padding-top: 20px;
+// }
 
 .form-group:first-child {
   padding: 0;
@@ -419,6 +420,7 @@ footer{
   border: 1px solid #ccc;
   background: #fff;
   font-size: 16px;
+  color:black;
   resize: none;
 }
 
@@ -445,6 +447,7 @@ footer{
   background: #fff;
   font-size: 14px;
   resize: none;
+  color: black;
 }
 
 .input-birth-wrap {
@@ -462,6 +465,7 @@ footer{
   background: #fff;
   font-size: 12px;
   cursor: pointer;
+  color: black;
 }
 
 .input-birth-wrap>p {

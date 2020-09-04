@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <div class='text-center'>
-    <%= image_tag current_user.avatar, size: '75x75', class: 'avatar' if current_user.avatar.attached?%>
-    <p style="color:#FFFFFF"><%= current_user.name %></p>
+    <%= image_tag current_user.image, size: '75x75', class: 'avatar' if current_user.image.attached?%>
+    <p style="color:#FFFFFF"> <%=current_user.nickname %></p>
   </div> 
 
 <% else %>

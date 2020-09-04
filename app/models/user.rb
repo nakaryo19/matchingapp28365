@@ -15,6 +15,7 @@ class User < ApplicationRecord
   has_many :Relationship
   has_many :chat_massage
   has_many :chat_room_users
+  has_one_attached :image
 
   validates :nickname,:sex_id,:birthday, presence: true
   validates :first_name,:last_name, presence:true, format: {with: /\A[ぁ-んァ-ン一-龥]/}
