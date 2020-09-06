@@ -17,7 +17,7 @@ class User < ApplicationRecord
   has_many :chat_room_users
   has_one_attached :image
 
-  validates :nickname,:sex_id,:birthday, presence: true
+  validates :nickname,:sex_id,:birthday,:watching_date, presence: true
   validates :first_name,:last_name, presence:true, format: {with: /\A[ぁ-んァ-ン一-龥]/}
   validates :first_name_kana,:last_name_kana, presence:true, format: {with: /\A[ァ-ヶー－]+\z/}
   validates :password, format: {with: /\A[a-z0-9]+\z/i}

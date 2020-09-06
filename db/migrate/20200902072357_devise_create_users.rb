@@ -15,6 +15,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.date   :birthday,           null: false
       t.integer :likesports_id,     null: false
       t.integer :liketeam_id,       null: false
+      t.date :watching_date,        null: false
       t.integer :prefectures_id,    null: false
       t.integer :job_id,            null: false
       t.integer :marriage_id,       null: false
