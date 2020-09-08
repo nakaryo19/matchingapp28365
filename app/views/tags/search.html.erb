@@ -43,16 +43,30 @@
   <% end %>
 </div>
 
-<%# unless @search_params.blank? %>
-  <%# @tags.each do |tag| %>
+<table>
+  <thead>
+  <tr>
+    <th>性別</th>
+    <th>好きなスポーツ</th>
+    <th>好きなチーム</th>
+    <th>居住地</th>
+    <th>職業</th>
+    <th>結婚の有無</th>
+    <th colspan="1"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @tags.each do |tag| %>
     <tr>
-      <td><%#= user.sex.name %></td>
-      <td><%#= tag.user.likesports.name %></td>
-      <td><%#= tag.user.liketeam.name %></td>
-      <td><%#= tag.user.watching_date %></td>
-      <td><%#= tag.user.prefectures.name %></td>
-      <td><%#= tag.user.job.name %></td>
-      <td><%#= tag.user.marriage.name %></td>
+      <td><%= user.sex.name %></td>
+      <td><%= tag.user.likesports.name %></td>
+      <td><%= tag.user.liketeam.name %></td>
+      <td><%= tag.user.watching_date %></td>
+      <td><%= tag.user.prefectures.name %></td>
+      <td><%= tag.user.job.name %></td>
+      <td><%= tag.user.marriage.name %></td>
     </tr>
-  <%# end %>
-<%# end %>
+  <% end %>
+  </tbody>
+</table>
