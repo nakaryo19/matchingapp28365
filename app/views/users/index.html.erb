@@ -1,0 +1,77 @@
+<h1>ユーザー検索</h1>
+
+<div class="search-form">
+  <%= form_with(scope: :search, url: users_path, method: :get, local: true) do |f| %>
+    <div class="field">
+      <%= f.label :sex_id, "性別" %>
+      <%= f.collection_select(:sex_id, Sex.all, :id, :name, {selected: @search_params[:sex_id]},{class:"select-box", id:"user-sex"}) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :likesports_id, "好きなスポーツ"%>
+      <%= f.collection_select(:likesports_id, Likesports.all, :id, :name, {selected: @search_params[:likesports_id]},{class:"select-box", id:"ueer-likesports"}) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :liketeam_id, "好きなチーム" %>
+      <%= f.collection_select(:liketeam_id, Liketeam.all, :id, :name, {selected: @search_params[:liketeam_id]},{class:"select-box", id:"user-liketeam"}) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :watching_date, "観戦希望日" %>
+      <%= f.date_field :watching_date_from, value: @search_params[:watching_date_from],class: 'form-control date-picker' %> ~ <%= f.date_field :watching_date_to, value: @search_params[:watching_date_to],class: 'form-control date-picker' %>
+    </div> 
+
+    <div class="field">
+      <%= f.label :prefectures_id, "居住地" %>
+      <%= f.collection_select(:prefectures_id, Prefectures.all, :id, :name, {selected: @search_params[:prefectures_id]},{class:"select-box", id:"user-prefectures"}) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :job_id, "職業" %>
+      <%= f.collection_select(:job_id, Job.all, :id, :name, {selected: @search_params[:job_id]},{class:"select-box", id:"user-job"}) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :marriage_id, "結婚の有無" %>
+      <%= f.collection_select(:marriage_id, Marriage.all, :id, :name, {selected: @search_params[:marriage_id]},{class:"select-box", id:"user-marriage"}) %>
+    </div>
+
+    <div class="actions">
+      <%= submit_tag '検索', class:"serch-btn" %>
+    </div>
+  <% end %>
+</div>
+
+<h2>ユーザー一覧</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>プロフィール写真</th>
+    <th>性別</th>
+    <th>好きなスポーツ</th>
+    <th>好きなチーム</th>
+    <th>観戦希望日</th>
+    <th>居住地</th>
+    <th>職業</th>
+    <th>結婚の有無</th>
+    <th colspan="1"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= image_tag user.image, size: '75x75', class: 'avatar' %></td>
+      <td><%= user.sex.name %></td>
+      <td><%= user.likesports.name %></td>
+      <td><%= user.liketeam.name %></td>
+      <td><%= user.watching_date %></td>
+      <td><%= user.prefectures.name %></td>
+      <td><%= user.job.name %></td>
+      <td><%= user.marriage.name %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

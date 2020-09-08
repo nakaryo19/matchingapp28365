@@ -23,15 +23,15 @@
   <body>
     <div class="container">
       
-        <%# if current_page?(root_path) || logged_in? && current_page?(followers_user_path(current_user)) %> 
+        <% if current_page?(root_path) %> 
           <div class='top-wrapper'>
             <%= render 'layouts/header' %>
           </div>
-        <%# else %>
+        <% else %>
           <div class="nav">
             <%= render 'layouts/header' %>
           </div>
-        <%# end %>
+        <% end %>
         <%= render 'layouts/flash_messages' %>
 
      <%= yield %>

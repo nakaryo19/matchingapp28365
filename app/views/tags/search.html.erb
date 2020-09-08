@@ -1,0 +1,72 @@
+<h1>Users</h1>
+
+<div class="search-form">
+  <%= form_with(scope: :search, url: search_tags_path, method: :get, local: true) do |f| %>
+    <div class="field">
+      <%= f.label :sex_id, "性別" %>
+      <%= f.collection_select(:sex_id, Sex.all, :id, :name, selected: @search_params[:sex_id], include_blank: t('helpers.select.include_blank')) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :likesports_id, "好きなスポーツ"%>
+      <%= f.collection_select(:likesports_id, Likesports.all, :id, :name, selected: @search_params[:likesports_id], include_blank: t('helpers.select.include_blank')) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :liketeam_id, "好きなチーム" %>
+      <%= f.collection_select(:liketeam_id, Liketeam.all, :id, :name, selected: @search_params[:liketeam_id], include_blank: t('helpers.select.include_blank')) %>
+    </div>
+
+    <%# <div class="field">
+      <%= f.label :watching_date, "観戦希望日" %>
+      <%#= f.date_field :watching_date_from, value: @search_params[:watching_date_from] %>  <%#= f.date_field :watching_date_to, value: @search_params[:watching_date_to] %>
+    <%# </div> %>
+
+    <div class="field">
+      <%= f.label :prefectures_id, "居住地" %>
+      <%= f.collection_select(:prefectures_id, Prefectures.all, :id, :name, selected: @search_params[:prefectures_id], include_blank: t('helpers.select.include_blank')) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :job_id, "職業" %>
+      <%= f.collection_select(:job_id, Job.all, :id, :name, selected: @search_params[:job_id], include_blank: t('helpers.select.include_blank')) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :marriage_id, "結婚の有無" %>
+      <%= f.collection_select(:marriage_id, Marriage.all, :id, :name, selected: @search_params[:marriage_id], include_blank: t('helpers.select.include_blank')) %>
+    </div>
+
+    <div class="actions">
+      <%= submit_tag '検索', class: "button" %>
+    </div>
+  <% end %>
+</div>
+
+<table>
+  <thead>
+  <tr>
+    <th>性別</th>
+    <th>好きなスポーツ</th>
+    <th>好きなチーム</th>
+    <th>居住地</th>
+    <th>職業</th>
+    <th>結婚の有無</th>
+    <th colspan="1"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @tags.each do |tag| %>
+    <tr>
+      <td><%= user.sex.name %></td>
+      <td><%= tag.user.likesports.name %></td>
+      <td><%= tag.user.liketeam.name %></td>
+      <td><%= tag.user.watching_date %></td>
+      <td><%= tag.user.prefectures.name %></td>
+      <td><%= tag.user.job.name %></td>
+      <td><%= tag.user.marriage.name %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
