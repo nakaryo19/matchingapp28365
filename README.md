@@ -133,7 +133,7 @@
   ・有料会員登録機能
   
 ■データベース設計  
-  https://app.diagrams.net/#G11_S_FMB5NrBgFPk8nP6mq-RIQt7f-4HU
+  ![ER図](https://gyazo.com/e7a70d5a320d35e7ecce64517452961b)
   
 
 ■ローカルでの動作方法（使用バージョンrails _6.0.0）  
