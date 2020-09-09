@@ -133,7 +133,7 @@
   ・有料会員登録機能
   
 ■データベース設計  
-  ![ER図](https://gyazo.com/e7a70d5a320d35e7ecce64517452961b)
+  ![ER図](file:///Users/user/Downloads/%E3%82%AA%E3%83%AA%E3%82%B7%E3%82%99%E3%83%8A%E3%83%AB%E3%82%A2%E3%83%95%E3%82%9A%E3%83%AA.jpg)
   
 
 ■ローカルでの動作方法（使用バージョンrails _6.0.0）  
