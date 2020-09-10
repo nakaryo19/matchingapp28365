@@ -17,3 +17,5 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 //= require moment
 //= require bootstrap-datetimepicker
+//= require jquery
+//= require bootstrap-sprockets

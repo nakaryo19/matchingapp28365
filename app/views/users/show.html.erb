@@ -1,0 +1,16 @@
+<div class='text-center'>
+  <%= image_tag @user.image, class: 'avatar' if @user.image.attached?%>
+  <p style="color:#FFFFFF"> <%= @user.nickname %></p>
+</div>
+
+<% if user_signed_in? %>
+  <div class='text-center'>
+    <div id= "follow_form">
+      <% if current_user.following?(@user) %>
+        <div class="btn btn-default" id="liked">いいね済</div>
+      <% else %>
+        <%= render 'users/follow', {relationship: @relationship} %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
