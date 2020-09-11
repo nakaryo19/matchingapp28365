@@ -15,8 +15,19 @@ class User < ApplicationRecord
   has_many :Relationship
   has_many :chat_massage
   has_many :chat_room_users
-  has_many :tag
+  has_many :active_relationships,class_name:  "Relationship", foreign_key: "follower_id", dependent: :destroy
+  has_many :passive_relationships, class_name: "Relationship", foreign_key: "following_id", dependent: :destroy
+  has_many :following, through: :active_relationships, source: :following
+  has_many :followers, through: :passive_relationships, source: :follower
   has_one_attached :image
+
+  def following?(other_user)
+    following.include?(other_user)
+  end
+
+  def matchers
+    following & followers
+  end
 
   scope :search, -> (search_params) do      #scopeでsearchメソッドを定義。(search_params)は引数
     return if search_params.blank?      #検索フォームに値がなければ以下の手順は行わない

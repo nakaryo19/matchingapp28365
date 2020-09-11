@@ -2,7 +2,12 @@
   <div class='text-center'>
     <%= image_tag current_user.image, size: '75x75', class: 'avatar' if current_user.image.attached?%>
     <p style="color:#FFFFFF"> <%=current_user.nickname %></p>
-  </div> 
+  </div>
+
+  <ul class="nav nav-tabs nav-justified mb-3 top-nav-tabs">
+    <li class="nav-item"><a href="<%= matching_index_path %>" class="nav-link <%= 'active' if current_page?(matching_index_path) %>">マッチング</a></li>
+    <li class="nav-item"><a href="<%= liked_path %>" class="nav-link <%= 'active' if current_page?(liked_path) %>">リクエストされてる</a></li>
+  </ul>
 
 <% else %>
   <div class="site-description text-center">
