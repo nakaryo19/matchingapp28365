@@ -1,0 +1,27 @@
+<div class="col-md-9">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="text-center">
+        <span style="font-size:18px;"></span>
+      </div>
+    </div>
+    <% if @users.present? %>
+    <% @users.each do |user| %>
+      <div class="col-sm-4 col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h1 class="panel-title">
+              <%= link_to "#{user.nickname}",  user_path(user.id) %>
+            </h1>
+          </div>
+          <div class="panel-body"></div>
+          <div class="thumbnail">
+            <%= image_tag(user.image) %>
+          </div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
