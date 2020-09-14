@@ -126,7 +126,7 @@
 
 ■実装した機能についてのGIFと説明  
   ユーザー検索ページより、条件に合ったユーザーを検索することができます。
-  ![挙動](https://imgur.com/a/Inn0VR1)
+  ![0a5bb350e4cfc29f6f0e728793966903](https://user-images.githubusercontent.com/68512685/93034453-098c0800-f675-11ea-8f92-8d77fff38cd1.gif)
 
 ■実装予定の機能  
   ・プロフィール編集機能  
@@ -134,7 +134,7 @@
   ・有料会員登録機能
   
 ■データベース設計  
-  ![ER図](https://imgur.com/a/CmPOGDW)
+  ![ER図 - Imgur](https://user-images.githubusercontent.com/68512685/93034368-ccc01100-f674-11ea-903f-f44a4902415f.jpg)
   
 
 ■ローカルでの動作方法（使用バージョンrails _6.0.0）  
