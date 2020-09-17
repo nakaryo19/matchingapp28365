@@ -7,9 +7,10 @@ class RelationshipsController < ApplicationController
       @following_user = User.find(params["following_id"])
       @matching = @following_user.following?(current_user)
 
-      respond_to do |format|
-        format.json
-      end
+      # respond_to do |format|
+      #   format.json
+      # end
+      # render :template => "relationships/create"
     else
       render :template => "users/show"
     end

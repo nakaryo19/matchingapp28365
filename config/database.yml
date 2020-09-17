@@ -13,21 +13,22 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  
+  database: heroku_b81b0df638c575b
+  host: us-cdbr-east-02.cleardb.com
+  username: bb10c5de4f3a3a
+  password: 46b41988  
 
 development:
   <<: *default
-  database: matchingapp28365_development
-  socket: /tmp/mysql.sock
+  # database: matchingapp28365_development
+  # socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: matchingapp28365_test
+  # database: matchingapp28365_test
   
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -51,6 +52,6 @@ test:
 #
 production:
   <<: *default
-  database: matchingapp28365_production
-  username: matchingapp28365
-  password: <%= ENV['MATCHINGAPP28365_DATABASE_PASSWORD'] %>
+  # database: matchingapp28365_production
+  # username: matchingapp28365
+  # password: <%= ENV['MATCHINGAPP28365_DATABASE_PASSWORD'] %>
