@@ -125,8 +125,12 @@
 
 
 ■実装した機能についてのGIFと説明  
-  ユーザー検索ページより、条件に合ったユーザーを検索することができます。
-  ![0a5bb350e4cfc29f6f0e728793966903](https://user-images.githubusercontent.com/68512685/93034453-098c0800-f675-11ea-8f92-8d77fff38cd1.gif)
+・ユーザー検索ページより、条件に合ったユーザーを検索することができます。 
+  ![d1107bc8430b3da3ad30f5f28d27faed](https://user-images.githubusercontent.com/68512685/93431823-a530a900-f8ff-11ea-963e-c49bae951ba5.gif) 
+  ・検索したユーザーにリクエスト（非同期通信）を送ることができます。 
+  ![90acdec48422bc71899e7ca00cfc33e4](https://user-images.githubusercontent.com/68512685/93431969-da3cfb80-f8ff-11ea-9bf4-430478c2d483.gif) 
+  ・トップページからマッチング済またはリクエストを送られたユーザーの確認が行えます。 
+  ![91300e0cdb93924836ce03f3d8ae1736](https://user-images.githubusercontent.com/68512685/93432132-0f494e00-f900-11ea-81a8-49671a0d1112.gif) 
 
 ■実装予定の機能  
   ・プロフィール編集機能  
