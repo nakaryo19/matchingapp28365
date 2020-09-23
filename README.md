@@ -143,4 +143,4 @@
 
 ■ローカルでの動作方法（使用バージョンrails _6.0.0）  
   ①cdコマンドでmatchingapp28365ディレクトリまで移動  
-  ②matchingapp28365ディレクトリにてrails sを実行  
+  ②matchingapp28365ディレクトリにてrails sを実行   
