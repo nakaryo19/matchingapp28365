@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        birthday: 生年月日
+        first_name: 苗字
+        last_name: 名前
+        first_name_kana: 苗字（カタカナ）
+        last_name_kana: 名前（カタカナ）
+        watching_date: 観戦希望日
+        image: 画像
+        likesports_id: 好きなスポーツ
+        liketeam_id: 好きなチーム
+        prefectures_id: 居住地
+        job_id: 職業
+        marriage_id: 結婚の有無

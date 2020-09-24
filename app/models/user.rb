@@ -52,7 +52,7 @@ class User < ApplicationRecord
   scope :job_id_is, -> (job_id) { where(job_id: job_id) if job_id.present? }
   scope :marriage_id_is, -> (marriage_id) { where(marriage_id: marriage_id) if marriage_id.present? }
 
-  validates :nickname,:sex_id,:birthday,:watching_date, presence: true
+  validates :nickname,:sex_id,:birthday,:watching_date,:likesports_id,:liketeam_id,:prefectures_id,:job_id,:marriage_id, presence: true
   validates :first_name,:last_name, presence:true, format: {with: /\A[ぁ-んァ-ン一-龥]/}
   validates :first_name_kana,:last_name_kana, presence:true, format: {with: /\A[ァ-ヶー－]+\z/}
   validates :password, format: {with: /\A[a-z0-9]+\z/i}
